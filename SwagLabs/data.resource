@@ -21,3 +21,9 @@ Login To Swag Labs
     Fill Text    ${password_id}    ${password}
     Sleep    1
     Click        ${login_id}
+    Validate Login
+    Sleep    1
+
+Validate Login
+    ${Products_text}    Get Text    css=#header_container .title
+    Should Be Equal    ${Products_text}    Products
